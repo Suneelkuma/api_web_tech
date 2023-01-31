@@ -4,6 +4,8 @@ const router=express.Router();
 
 
 const Inventory=require('../models/Inventory')
+
+// create inventory
 router.post('/createInventory',async(req,res)=>{
     try {
         let inventory=await Inventory.findOne({ inventoryname:req.body. inventoryname});

@@ -5,6 +5,9 @@ const router=express.Router();
 const jwt=require('jsonwebtoken');
 const JWT_SECRET="IAmLearningMERN"
 const Customer=require('../models/Customer')
+
+// create customer
+
 router.post('/createCustomer',async(req,res)=>{
     try {
         let customer=await Customer.findOne({email:req.body.email});

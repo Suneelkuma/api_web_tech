@@ -4,6 +4,9 @@ const router=express.Router();
 
 const fetchCustomer=require('../middleware/fetchcustomer')
 const Order=require('../models/Order')
+
+// createOrders
+
 router.post('/createOrder',fetchCustomer,async (req,res)=>{
     try {
       
@@ -55,28 +58,7 @@ router.get('/orders',async(req,res)=>{
 })
 
 
-// find by name of inventory
 
-// router.get('/inventory/:inventoryType',async(req,res)=>{
-//     try {
-       
-   
-
-//   let  inventory= await Inventory.find({inventoryType:req.params.inventoryType})
-//     res.status(200).json({
-//         status:"Success",
-//         inventory
-//     })
-    
-//     } catch (error) {
-//         res.status(200).json({
-//             status:"Failed",
-//         message:error.message
-//         })
-//     }
-
-   
-// })
 
 
 module.exports=router
