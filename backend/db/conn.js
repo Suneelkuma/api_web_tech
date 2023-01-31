@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-const mongoURI='mongodb://localhost:27017/customer';
+const mongoURI='mongodb://localhost:27017/api_web_tech_assignment';
 const connectToMongo=()=>{
     mongoose.connect(mongoURI,()=>{
         console.log("Connected to database successfully");
