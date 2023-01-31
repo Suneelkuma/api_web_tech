@@ -46,7 +46,7 @@ router.get('/customerDetails',async(req,res)=>{
        
    
 
-  let  customer= await Customer.find().pretty()
+  let  customer= await Customer.find()
     res.status(200).json({
         status:"Success",
         customer
